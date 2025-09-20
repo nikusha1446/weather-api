@@ -1,5 +1,5 @@
 import express from 'express';
-import weatherRoutes from './routes/weatherRoute';
+import weatherRoute from './routes/weatherRoute.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Routes
-app.use('/weather', weatherRoutes);
+app.use('/api/v1/weather', weatherRoute);
 
 // 404 handler
 app.use((req, res) => {
