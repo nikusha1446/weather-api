@@ -59,7 +59,7 @@ export const setCache = async (key, data, expirationInSeconds = 43200) => {
   }
 };
 
-export const generateWeatherCacheKey = (city) => {
+export const generateCacheKey = (city) => {
   return `weather:${city.toLowerCase()}`;
 };
 
